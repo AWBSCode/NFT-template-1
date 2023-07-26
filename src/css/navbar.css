@@ -1,0 +1,115 @@
+.navbar {
+    position: relative;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 18px;
+    padding: 25px 50px;
+    position: relative;
+}
+
+.list .list-item {
+    position: relative;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.list .list-item::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    border-radius: 10px;
+    bottom: -1px;
+    background-color: white;
+    padding: 0;
+    transition: all ease-in-out .3s;
+}
+
+.list .list-item:hover::before {
+    width: calc(100% - 20px);
+}
+
+@media only screen and (max-width : 768px) {
+    .navbar {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .list {
+        display: none;
+        position: absolute;
+        top: 50px;
+        background-color: black;
+        z-index: 100;
+
+    }
+
+    .list .list-item {
+        background-color: black;
+        width: 100vw;
+        padding: 20px 0;
+        transition: 0.4s;
+    }
+
+    .list .list-item::before {
+        content: unset;
+    }
+
+    .list .list-item:hover {
+        background-color: rgb(111, 217, 255);
+    }
+
+    .logo {
+        position: absolute;
+        top: 8px;
+        left: 5px;
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .line {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+
+    .show {
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding: 0;
+        width: auto !important;
+        text-align: center;
+
+    }
+
+    .burger-menu-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,83 @@
+/* Hero intro section container */
+.hero-intro {
+    position: relative;
+    min-height: 100svh;
+    background-color: rgb(28, 27, 27);
+    z-index: 1;
+    --line-color: rgba(0, 0, 0, 0.565);
+    background-image: linear-gradient(to right, var(--line-color) 1px, transparent 1px), linear-gradient(to bottom, var(--line-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+
+}
+
+/* Text side and Image side container */
+.hero-intro .content-container {
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding-bottom: 80px;
+}
+
+/* text side */
+.hero-intro .content-container .text-side {
+    width: 35%;
+}
+
+.hero-intro .content-container .text-gradient {
+    background: linear-gradient(to left, #da5fff 40%, #7777f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Layout and background gradient */
+.hero-intro::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(0, 255, 234), rgb(173, 235, 255), rgb(255, 65, 255));
+    opacity: 0.1;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+/* Image side */
+.hero-intro .img-side .img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0% 5%, 5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%);
+    padding: 40px;
+    border: 2px solid white;
+}
+
+.hero-intro .img-side .img {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 50px -5px rgb(143, 251, 255);
+}
+
+/* Responsive configuration */
+@media only screen and (max-width: 768px) {
+    .hero-intro .content-container {
+        flex-direction: column-reverse;
+        gap: 50px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero-intro .content-container .text-side {
+        width: 90%;
+    }
+
+    .hero-intro .img-side .img-wrapper {
+        padding: 10px;
+    }
+
+    .hero-intro .img-side .img {
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,80 @@
+a {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 10px 30px;
+    transition: 0.3s;
+    --clr: rgb(54, 198, 255);
+    cursor: pointer;
+}
+
+a:hover {
+    letter-spacing: 0.25rem;
+    background: var(--clr);
+    color: var(--clr);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: #27282c;
+}
+
+a span {
+    position: relative;
+    z-index: 1;
+}
+
+a:hover span {
+    color: var(--clr);
+}
+
+a i {
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
+a i::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+}
+
+a:hover i::before {
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 30px 30px var(--clr);
+}
+
+/* ---- */
+a i::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+}
+
+a:hover i::after {
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+    box-shadow: 30px -30px var(--clr);
+}
