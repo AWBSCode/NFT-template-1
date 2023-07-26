@@ -22,7 +22,7 @@ export default function HeroIntro() {
                 </div>
                 <div className='img-side'>
                     <div className='img-wrapper'>
-                        <img src={frog} width={280} className='img' />
+                        <img src={frog} width={ 280 } className='img img-fluid' />
                     </div>
                 </div>
             </main>

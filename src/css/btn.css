@@ -16,6 +16,7 @@ a:hover {
     letter-spacing: 0.25rem;
     background: var(--clr);
     color: var(--clr);
+    box-shadow: 0 0 50px var(--clr);
 }
 
 a::before {

@@ -30,6 +30,7 @@
     background: linear-gradient(to left, #da5fff 40%, #7777f0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 80px #da5fff;
 }
 
 /* Layout and background gradient */
