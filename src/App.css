@@ -1,0 +1,29 @@
+body {
+    overflow-x: hidden;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #e48aff 40%, rgb(131, 230, 209));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 80px #e48affe0;
+}
+
+.featured-heading {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 15px; */
+}
+
+.featured-heading::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 5px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #e48aff 40%, rgb(131, 230, 209));
+    bottom: -6px;
+}
