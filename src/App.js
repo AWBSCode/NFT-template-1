@@ -1,7 +1,8 @@
 import HeroIntro from "./componets/home/herointro/HeroIntro";
 import Collection from "./componets/home/featuredItems/Collection";
 import About from "./componets/home/about/About";
-import Features from "./componets/home/features/Features";
+import Steps from './componets/home/steps/Steps'
+import Sellers from "./componets/home/sellers/Sellers";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <HeroIntro />
       <Collection />
       <About />
-      <Features />
+      <Steps />
+      <Sellers />
     </div>
   );
 }
