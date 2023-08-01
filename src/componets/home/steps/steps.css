@@ -75,3 +75,32 @@
 .steps .steps-container .step-item .step-heading {
     color: white;
 }
+
+/* media queries */
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .steps .step-text-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 680px) {
+    .steps .steps-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .steps .steps-container .step-item {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 337px) {
+
+}

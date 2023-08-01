@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/navbar.css';
 
 export default function Navbar() {
@@ -23,11 +24,11 @@ export default function Navbar() {
 
             {/* List */}
             <ul className={`list ${showMenu ? 'show' : ''}`}>
-                <li className='list-item'>Home</li>
-                <li className='list-item'>About</li>
-                <li className='list-item'>blog</li>
-                <li className='list-item'>Collection</li>
-                <li className='list-item'>Contact</li>
+                <li className='list-item'><Link to='/'>home</Link></li>
+                <li className='list-item'><Link to='/about'>about</Link></li>
+                <li className='list-item'><Link to='/blog'>blog</Link></li>
+                <li className='list-item'><Link to='/collection'>collection</Link></li>
+                <li className='list-item'><Link to='/contact'>contact</Link></li>
             </ul>
         </header>
     );

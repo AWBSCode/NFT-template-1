@@ -1,9 +1,9 @@
 import React from 'react';
 
 import '../../../App.css'
-import '../../../css/featuredCollection.css'
+import './featuredCollection.css'
 
-export default function Collection() {
+export default function FeaturedCollection() {
   return (
     <section className="featured-collection">
       <h1 className='text-gradient featured-heading'>Our Featured Collection</h1>
@@ -16,11 +16,6 @@ export default function Collection() {
         <div className='img' style={{ '--data-src': `url(${process.env.PUBLIC_URL + '/imgs/nft3.jpg'})` }}></div>
 
       </div>
-
-      {/* <div className='controllers-container'>
-        <div className='controller right'>{">"}</div>
-        <div className='controller left'>{"<"}</div>
-      </div> */}
     </section>
   );
 }

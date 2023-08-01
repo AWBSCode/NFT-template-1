@@ -1,0 +1,34 @@
+.outer-footer {
+    width: 95%;
+    min-height: 400px;
+    background-color: black;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-footer .footer-content-container {
+    gap: 80px;
+    width: 80%;
+}
+
+.outer-footer .footer-content-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.outer-footer .footer-content-container ul li {
+    opacity: 0.6;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.outer-footer .footer-content-container p {
+    opacity: 0.6;
+}
+.outer-footer .footer-content-container ul li:hover {
+    opacity: 0.8;
+}

@@ -1,19 +1,23 @@
 import React from 'react'
-import '../../../css/sellers.css'
+import SellerItem from './SellerItem'
+import {sellersArr} from './sellersArr'
+import './sellers.css'
 
 export default function Sellers() {
   return (
-    <section>
-        <h1 className='sellers-heading'>Top Sellers</h1>
+    <section className='top-sellers'>
+        <h1 className='sellers-heading py-5'>Top Sellers</h1>
         <ul>
-          <li>
-            <div className='avatar' data-src={`url(${process.env.PUBLIC_URL+'/avatars/avt1.jpg'})`}></div>
-            <div className='info'>  
-              <h3>Seller Name</h3>
-              <p><span>12</span> item</p>
-            </div>
-            <h1 className='order-num'>#1</h1>
-          </li>
+          {
+            sellersArr.map(seller => {
+              return <SellerItem 
+                avt={`${process.env.PUBLIC_URL}/avatars/avt${seller.id}.jpg`}
+                name={seller.name}
+                items={seller.items}
+                order={seller.id}
+              />
+            })
+          }
         </ul>
     </section>
   )

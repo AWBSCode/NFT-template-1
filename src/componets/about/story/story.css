@@ -1,0 +1,32 @@
+.our-story {
+    min-height: 75vh;
+    background-color: rgb(27,27,27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.our-story .story-heading {
+    --heading-color: rgb(255, 99, 242);
+    color: var(--heading-color);
+    text-transform: uppercase;
+    text-shadow: 0 0 30px var(--heading-color);
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.our-story main.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+
+.our-story main.container img {
+    border-radius: 20px;
+    box-shadow: 0 0 80px rgba(255, 168, 248, 0.222);
+}

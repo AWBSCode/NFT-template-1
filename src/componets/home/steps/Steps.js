@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../css/steps.css'
+import './steps.css'
 
 export default function Steps() {
   return (
@@ -18,7 +18,7 @@ export default function Steps() {
 
         {/* steps side */}
         {/* steps container */}
-        <div className='steps-container'>
+        <div className='steps-container' data-aos="zoom-in">
             <div className='step-item'>
               <h1 className='step-num'>01</h1>
               <h5 className='step-heading'>CONNECT YOUR WALLET</h5>

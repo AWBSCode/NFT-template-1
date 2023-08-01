@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import '../../../css/about.css';
-import Waves from './Waves';
+import './about.css';
+import Waves from '../../global/Waves';
 
 function About() {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import '../../../css/heroIntro.css'
-import Navbar from '../Navbar'
+import './heroIntro.css'
+import Navbar from '../../global/Navbar'
 import Button from '../Button'
 
 export default function HeroIntro() {
