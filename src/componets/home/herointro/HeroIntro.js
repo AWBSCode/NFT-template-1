@@ -1,8 +1,7 @@
 import React from 'react'
-import '../../css/heroIntro.css'
-import Navbar from './Navbar'
-import frog from "../../imgs/lion (3).jpg"
-import Button from './Button'
+import './heroIntro.css'
+import Navbar from '../../global/Navbar'
+import Button from '../Button'
 
 export default function HeroIntro() {
     return (
@@ -10,7 +9,7 @@ export default function HeroIntro() {
             <Navbar />
 
             <main className='content-container'>
-                <div className='text-side'>
+                <div className='text-side' data-aos="fade-up">
                     <h1 className='text-gradient'>Explore NFTs World,</h1>
                     <h2>You can collect, buy and sell extraordinary NFTs.</h2>
                     <p className='opacity-50'>
@@ -20,9 +19,9 @@ export default function HeroIntro() {
                     <Button text="explore" />
 
                 </div>
-                <div className='img-side'>
+                <div className='img-side' data-aos="zoom-in">
                     <div className='img-wrapper'>
-                        <img src={frog} width={280} className='img' />
+                        <img src={`${process.env.PUBLIC_URL}/imgs/nft8.jpg`} width={ 280 } className='img img-fluid' />
                     </div>
                 </div>
             </main>

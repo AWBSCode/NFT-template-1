@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&family=Tektur&display=swap');
+
+.top-sellers {
+    position: relative;
+    min-height: 80vh;
+    background: linear-gradient(to left, #22184c, #27272c);
+    color: white; /* For now */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.top-sellers ul {
+    list-style: none;
+    /* display: grid;
+    grid-template-columns: 400px 400px 400px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-sellers ul li {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+.top-sellers ul li .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: var(--data-avatar);
+    background-position: center;
+    background-size: cover;
+}
+
+.top-sellers ul li .info {
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-sellers ul li .order-num {
+    font-style: italic;
+    color: rgb(107, 107, 107);
+    font-family: 'Tektur', cursive;
+}
+
+/* media queries */
+@media (max-width: 800px) {
+    .top-sellers ul li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 385px) {
+    .top-sellers ul li .avatar {
+        width: 50px;
+        height: 50px;
+    }
+}

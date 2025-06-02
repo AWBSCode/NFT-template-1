@@ -41,6 +41,11 @@
     width: calc(100% - 20px);
 }
 
+.list .list-item a {
+    text-decoration: none;
+    color: white;
+}
+
 @media only screen and (max-width : 768px) {
     .navbar {
         flex-direction: column-reverse;

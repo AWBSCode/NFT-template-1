@@ -1,0 +1,100 @@
+.collection {
+    min-height: 100vh;
+    background: rgb(26, 26, 26);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collection::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgb(0, 255, 234), rgb(173, 235, 255), rgb(255, 65, 255));
+    opacity: 0.2;
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.collection main {
+    width: 35%;
+    color: white;
+}
+
+.collection main .text-gradient {
+    background-image: linear-gradient(to left, #da5fff 40%, #7777f0);
+    text-shadow: 0 0 80px #da5fff;
+}
+
+.collection .img-container {
+    width: 45%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collection .img-container .img {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    background-image: var(--data-img);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: 0.6s;
+}
+
+.collection .img-container .img::before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(to right, lightblue, lightgreen);
+    filter: blur(60px);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.collection .img-container .img::after {
+    content: '';
+    position: absolute;
+    width: calc(100%);
+    height: calc(100%);
+    background-image: linear-gradient(to left, #da5fff 40%, #7777f0);
+    border-radius: 50px;
+    z-index: -1;
+    transition: 0.6s;
+    transform: rotate(-10deg);
+}
+
+
+@media (max-width: 777px) {
+    .collection {
+        flex-direction: column;
+        gap: 50px;
+        padding: 40px 0;
+    }
+
+    .collection .img-container {
+        width: 100%;
+    }
+
+    .collection .img-container .img {
+        width: 80%;
+    }
+
+    .collection .img-container .img::after {
+        display: none;
+    }
+
+    .collection main {
+        width: 70%;
+    }
+}

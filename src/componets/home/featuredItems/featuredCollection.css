@@ -1,0 +1,105 @@
+.featured-collection {
+    position: relative;
+    background-image: linear-gradient(to bottom, #27282c, rgb(22, 56, 61));
+    min-height: 80vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    gap: 60px;
+}
+
+/* collection container */
+.collection-container {
+    display: flex;
+    padding: 40px 0;
+    z-index: 5;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+/* imgs */
+.collection-container .img {
+    width: 350px;
+    height: 400px;
+    border-radius: 15px;
+    transition: 1s;
+    background: var(--data-src);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px;
+    transition: 0.5s;
+}
+
+.collection-container .img::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    border: 2px solid wheat;
+    border-radius: 15px;
+}
+
+.collection-container .img::after {
+    content: '';
+    position: absolute;
+    height: 105%;
+    width: 105%;
+    background-image: linear-gradient(to bottom, pink, purple);
+    filter: blur(90px);
+    z-index: -1;
+    opacity: 0;
+    transition: .7s;
+}
+
+.collection-container .img:hover::after {
+    opacity: 0.6;
+}
+
+/* middle */
+#middle {
+    height: 500px;
+}
+
+#middle::after {
+    opacity: 0.6;
+}
+
+/* Media Queries */
+/* media query for small desktop screens */
+@media (max-width: 768px) {
+    .collection-container {
+        flex-direction: column;
+        gap: 80px;
+    }
+}
+
+/* media query for mobile screens */
+@media (max-width: 435px) {
+    .collection-container {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .collection-container .img {
+        width: 80%;
+    }
+
+    .featured-collection h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 323px) {
+    .featured-collection h1 {
+        font-size: 23px;
+    }
+}
